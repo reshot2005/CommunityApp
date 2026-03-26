@@ -1,0 +1,31 @@
+{
+  "name": "community_app",
+  "version": "1.0.0",
+  "description": "Clean full-stack scaffold for a role-based job and community platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poojasubramani801/Pooja-S_community_portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/poojasubramani801/Pooja-S_community_portal/issues"
+  },
+  "homepage": "https://github.com/poojasubramani801/Pooja-S_community_portal#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.1",
+    "nodemailer": "^8.0.3",
+    "passport": "^0.7.0",
+    "socket.io": "^4.8.3"
+  }
+}

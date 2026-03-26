@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS messages;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS applications;
+DROP TABLE IF EXISTS jobs;
+DROP TABLE IF EXISTS college_profiles;
+DROP TABLE IF EXISTS company_profiles;
+DROP TABLE IF EXISTS student_profiles;
+DROP TABLE IF EXISTS users;
