@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import fs from "fs";
+import path from "path";
 import apiRoutes from "./routes/index.js";
 import errorHandler from "./middleware/errorHandler.js";
 import notFound from "./middleware/notFound.js";
@@ -15,6 +17,9 @@ const demoJobs = [
 app.disable("x-powered-by");
 app.use(cors({ origin: env.corsOrigin }));
 app.use(express.json({ limit: "100kb", strict: true }));
+const uploadsPath = path.resolve(process.cwd(), env.uploadDir);
+fs.mkdirSync(uploadsPath, { recursive: true });
+app.use("/uploads", express.static(uploadsPath));
 app.use((req, res, next) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("X-Frame-Options", "DENY");

@@ -29,6 +29,7 @@ const dbUser = process.env.DB_USER || "";
 const dbPassword = process.env.DB_PASSWORD || "";
 const dbName = process.env.DB_NAME || "";
 const databaseUrl = process.env.DATABASE_URL || "";
+const uploadDir = process.env.UPLOAD_DIR || "uploads";
 const dbPort = Number.isNaN(parsedDbPort) ? 5432 : parsedDbPort;
 const hasDatabaseConfig = Boolean(
   databaseUrl || (dbHost && dbUser && dbName)
@@ -46,6 +47,7 @@ const env = {
   dbPassword,
   dbName,
   dbPort,
+  uploadDir,
   hasDatabaseConfig,
   jwtSecret: process.env.JWT_SECRET || "change-me",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "1d",
